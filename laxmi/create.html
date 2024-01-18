@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Account</title>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('form');
+      const emailInput = document.querySelector('input[name="email"]');
+      const passwordInput = document.querySelector('input[name="password"]');
+      const confirmPasswordInput = document.querySelector('input[name="confirmPassword"]');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault(); // prevent the form from submitting
+
+        // Validate email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value)) {
+          alert('Please enter a valid email address');
+          return;
+        }
+
+        // Validate password
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+        if (!passwordRegex.test(passwordInput.value)) {
+          alert('Password must contain at least 8 characters, including one lowercase letter, one uppercase letter, and one digit');
+          return;
+        }
+
+        // Validate confirm password
+        if (confirmPasswordInput.value !== passwordInput.value) {
+          alert('Confirm password must match the password');
+          return;
+        }
+
+        // If all conditions are met, submit the form
+        form.submit();
+      });
+    });
+  </script>
+</head>
+<link rel="stylesheet" href="create.css">
+<body>
+  <div class="container">
+    <h2>Create Account</h2>
+    <form action="process-create-account.php" method="post">
+      <input type="text" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+      <input type="submit" value="Create Account">
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+</body>
+</html>

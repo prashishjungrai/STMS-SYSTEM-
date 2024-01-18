@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Integration</title>
+</head>
+<body>
+    <h1>Course Integration</h1>
+
+    <form>
+        <label for="subject">Select Subject:</label>
+        <select id="subject">
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+            <option value="english">English</option>
+            <!-- Add more options for subjects if needed -->
+        </select>
+        <br>
+
+        <label for="task">Task:</label>
+        <input type="text" id="task" name="task">asdfsdafsadfsadfdsaf
+        <br>
+
+        <label for="due-date">Due Date:</label>
+        <input type="date" id="due-date" name="due-date">
+        <br>
+
+        <button type="button" onclick="addTask()">Add Task</button>
+        <br>
+
+        <h2>Tasks:</h2>
+        <ul id="task-list">
+            <!-- Tasks will be dynamically added here -->
+        </ul>
+    </form>
+
+    <script>
+        function addTask() {
+            var subject = document.getElementById("subject").value;
+            var task = document.getElementById("task").value;
+            var dueDate = document.getElementById("due-date").value;
+            
+            var taskItem = document.createElement("li");
+            taskItem.innerHTML = "Subject: " + subject + "<br>Task: " + task + "<br>Due Date: " + dueDate + "<br><hr>";
+            
+            document.getElementById("task-list").appendChild(taskItem);
+        }
+    </script>
+</body>
+</html>

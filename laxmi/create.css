@@ -1,0 +1,62 @@
+body {
+ 
+  background: linear-gradient(to bottom left, rgb(75, 196, 221), rgb(58, 74, 244));
+  justify-content: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 59px;
+    border: 1px solid #bcb6b6;
+    background-color: rgb(240, 238, 235);
+    border-radius: 20px;
+    box-shadow: 0 0 10px #17183b;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color:#17183b;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #17183b;
+    border-radius: 20px;
+  }
+  
+  input[type="submit"] {
+    padding: 10px;
+    background-color: #17183b;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 20px;
+    color: #090808;
+  }
+  
+  a {
+    color:black;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration:underline;
+    
+  }
+  
