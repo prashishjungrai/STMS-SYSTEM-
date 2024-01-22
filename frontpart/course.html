@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|| the big coder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!--container div starts here-->
+  <div class="container">
+    <!-- switch for Dark/Light Mode -->
+    
+    <h1>Course Integration</h1>
+    <!--input-container div starts here-->
+    <div class="input-container">
+     
+        <!-- FOR SELECTING SUBJECT -->
+        <select id="subjectInput">
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+            <option value="english">English</option>
+            <option value="computer_eng">Computer Engineering</option>
+            <option value="data_structures">Data Structures</option>
+            <option value="algorithms">Algorithms</option>
+            <option value="programming">Programming</option>
+            <option value="networking">Networking</option>
+            <option value="databases">Databases</option>
+            <option value="operating_sys">Operating Systems</option>
+            <option value="software_eng">Software Engineering</option>
+            <option value="computer_vision">Computer Vision</option>
+            <option value="artificial_intel">Artificial Intelligence</option>
+            <option value="robotics">Robotics</option>
+            <option value="digital_design">Digital Design</option>
+            <option value="computer_security">Computer Security</option>
+            <option value="web_development">Web Development</option>
+            <option value="machine_learning">Machine Learning</option>
+            <option value="computer_networks">Computer Networks</option>
+            <option value="embedded_systems">Embedded Systems</option>
+            <option value="computer_architecture">Computer Architecture</option>
+            <!-- Add more subjects as needed -->
+          </select>
+          
+      <input type="text" id="taskInput" placeholder="Enter task...">
+     
+      <input type="date" id="dueDateInput" class="due-date-input">
+      <select id="priorityInput">
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
+      </select>
+      <button onclick="addTask()">Add</button>
+    </div>
+    <!--filter-container div starts here-->
+    <div class="filter-container">
+      <button onclick="filterTasks('all')">All</button>
+      <button onclick="filterTasks('active')">Active</button>
+      <button onclick="filterTasks('completed')">Completed</button>
+    </div>
+    <!--filter-container div ends here-->
+    <!--sort-container div starts here-->
+    
+    <div class="sort-container">
+      <button onclick="sortTasks('name')">Sort by Name</button>
+      <button onclick="sortTasks('date')">Sort by Date</button>
+      <button onclick="sortTasks('priority')">Sort by Priority</button>
+    </div>
+
+
+    <!-- COURSE INTEGRATION div starts here -->
+<!-- COURSE INTEGRATION div starts here -->
+<div class="course_integration">
+  <a href="course.html">
+  <h2>Course Integration</h2>
+  </a>
+</div>
+
+
+    
+    <!--sort-container div ends here-->
+    <div id="taskBoxes"></div>
+
+    <!--all task item are saved here-->
+    <ul id="taskList"></ul>
+  </div>
+  <!--container div ends here-->
+  <!-- EditTaskModal div starts here-->
+  <div id="editTaskModal" class="modal">
+    <div class="modal-content">
+      <h2>Edit Task</h2>
+      <input type="text" id="editTaskNameInput" placeholder="Edit task name...">
+      <input type="date" id="editDueDateInput" class="due-date-input">
+      
+      <button onclick="saveEditedTask()">Save</button>
+      <button onclick="closeEditTaskModal()">Cancel</button>
+    
+      
+    
+    </div>
+    
+  </div>
+  <!-- EditTaskModal div ends here-->
+  
+  
+      <script src="course.js">       
+    </script>
+</body>
+</html>

@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom right, rgb(75, 196, 221), rgb(58, 74, 244));
+  background:linear-gradient(to bottom right, #457782 , #12343b);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -20,12 +20,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.1px solid black; /* Add a border to create the box effect */
+  border: 0.1px solid none; /* Add a border to create the box effect */
   padding: 10px; /* Add padding for some space inside the box */
   font-size: small;
   text-decoration:none;
-  border-radius:  20px;
-  background: linear-gradient(to bottom right, rgb(75, 196, 221), rgb(58, 74, 244));
+  border-radius:  40px;
+  background: linear-gradient(to  right,  #457782 , #12343b);
   
 }
 .course_integration  a {
@@ -43,31 +43,18 @@ body {
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
   box-shadow: 0 2px 4px rgba(7, 7, 7, 0.1);
-  background: #fff;
-  border-radius: 20px;
+  background:linear-gradient(to bottom right,#b93b6d, #cf8846);
+  border-radius: 40px;
 }
-/*dark-mode styling*/
-body.dark-mode {
-  background: #333;
-  color: #fff;
-}
-body.dark-mode .container {
-  background: #444;
-  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
-}
-body.dark-mode li {
-  background-color: #444;
-}
+
+
 .due-date-input {
   flex: 1;
   padding: 8px;
 }
-body.dark-mode .modal-content {
-  background-color: #444;
-  color: white;
-}
+
 h1 {
   text-align: center;
   margin-bottom: 20px;
@@ -80,6 +67,8 @@ h1 {
 #taskInput {
   flex: 1;
   padding: 8px;
+  padding: 8px;
+  
 }
 #taskDescriptionInput {
 
@@ -88,7 +77,7 @@ h1 {
 
 button {
   padding: 5px 15px;
-  background-color: #007BFF;
+  background-color:#478559;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -145,11 +134,11 @@ li span {
 }
 .filter-container button,
 .sort-container button {
-  background-color: #17a2b8;
+  background-color:#478559;
 }
 .filter-container button:hover,
 .sort-container button:hover {
-  background-color: #138496;
+  background-color: #133896;
 }
 /* Active Button Styling */
 .filter-container button.active,
@@ -233,7 +222,5 @@ li.high-priority {
   .sort-container button {
     width: 280px;
   }
-  .dark-mode-switch{
-    margin-left: 40px;
-  }
+ 
 }

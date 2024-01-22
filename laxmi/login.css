@@ -2,8 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, rgb(75, 196, 221), rgb(58, 74, 244));
-    justify-content: center;
+    background:linear-gradient(to bottom right, #457782 , #12343b);
     display: flex;
     align-items: center;
     justify-content: center;
